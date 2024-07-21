@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Green Community Hub</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+        }
+        .section {
+            margin-bottom: 20px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #333;
+            margin-top: 0;
+        }
+        .data-display {
+            font-size: 18px;
+            color: #555;
+        }
+        .data-display p {
+            margin: 10px 0;
+        }
+        .initiative-form {
+            margin-top: 20px;
+        }
+        .initiative-form input, .initiative-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .initiative-form button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .initiative-form button:hover {
+            background-color: #45a049;
+        }
+        .alert {
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            color: white;
+            font-size: 16px;
+        }
+        .alert.warning {
+            background-color: #ff9800;
+        }
+        .alert.info {
+            background-color: #2196F3;
+        }
+        .alert.critical {
+            background-color: #f44336;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Smart Green Community Hub</h1>
+    </header>
+    <div class="container">
+        <!-- Environmental Monitoring -->
+        <div class="section">
+            <h2>Real-time Environmental Monitoring</h2>
+            <div class="data-display">
+                <p><strong>Air Quality:</strong> <span id="air-quality">Loading...</span></p>
+                <p><strong>Weather:</strong> <span id="weather">Loading...</span></p>
+                <p><strong>Water Quality:</strong> <span id="water-quality">Loading...</span></p>
+            </div>
+            <!-- Alerts -->
+            <div class="alert warning" id="air-quality-alert">
+                <strong>Warning:</strong> Air quality is poor today. Please take necessary precautions.
+            </div>
+            <div class="alert info" id="weather-info">
+                <strong>Info:</strong> The weather is sunny with a high of 25°C. A perfect day for outdoor activities.
+            </div>
+            <div class="alert critical" id="water-quality-alert">
+                <strong>Critical:</strong> Water quality is compromised. Immediate action required.
+            </div>
+        </div>
+
+        <!-- Sustainable Practices -->
+        <div class="section">
+            <h2>Sustainable Practices</h2>
+            <div class="data-display">
+                <p><strong>Energy Consumption:</strong> <span id="energy-consumption">Loading...</span></p>
+                <p><strong>Water Usage:</strong> <span id="water-usage">Loading...</span></p>
+                <p><strong>Recycling Rates:</strong> <span id="recycling-rates">Loading...</span></p>
+            </div>
+        </div>
+
+        <!-- Community Engagement -->
+        <div class="section">
+            <h2>Community Engagement & Green Initiatives</h2>
+            <p>Submit your ideas, vote on community green initiatives, and stay informed about upcoming events.</p>
+            <div class="initiative-form">
+                <h3>Propose a New Initiative</h3>
+                <form id="initiative-form">
+                    <input type="text" id="initiative-title" placeholder="Title of the Initiative" required>
+                    <textarea id="initiative-description" rows="4" placeholder="Description of the Initiative" required></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            <h3>Upcoming Events</h3>
+            <ul id="events-list">
+                <li>Community Clean-up Day - August 15, 2024</li>
+                <li>Green Living Workshop - September 10, 2024</li>
+                <li>Tree Planting Initiative - October 5, 2024</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Example JavaScript to update data (placeholders)
+        document.getElementById('air-quality').textContent = 'Good';
+        document.getElementById('weather').textContent = 'Sunny, 25°C';
+        document.getElementById('water-quality').textContent = 'Safe';
+
+        document.getElementById('energy-consumption').textContent = '350 kWh (This Month)';
+        document.getElementById('water-usage').textContent = '5,000 liters (This Month)';
+        document.getElementById('recycling-rates').textContent = '70%';
+
+        // Form Submission
+        document.getElementById('initiative-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Your initiative has been submitted! Thank you for contributing.');
+        });
+    </script>
+</body>
+</html>
